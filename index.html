@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First ES6 Project</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+
+        <div class="col-md-8 offset-md-2">
+            <h1 class="display-4 text-center mb-4">Github User Search</h1>
+
+            <div class="form-group">
+                <input type="text" class="form-control form-control-md" id="user-Search" placeholder="Type a github user name...">
+
+            </div>
+
+        </div>
+
+        <!-- Section for user name and title -->
+        <div class="col-md-4 offset-md-7 user-details">
+            <div id="user-box">
+
+                <span class="titles">User</span>
+                <div id="username"></div>
+
+            </div>
+
+            <!-- Real name  -->
+            <div id="name-box">
+
+                <span class="titles">Name</span>
+                <div id="real-name"></div>
+
+            </div>
+
+
+            <div id="location-box">
+                <span class="titles">Location</span>
+                <div id="location"></div>
+
+            </div>
+        </div>
+
+        <div class="user-avatar">
+            <!-- Avatar -->
+            <img id="avatar" src="">
+        </div>
+
+        <a id="html-url" href="" target="_blank">Visit My GitHub</a>
+
+
+        <!-- Section for Followers -->
+        <div class="row">
+            <div class="col-md-12 text-center followers">
+
+                <div id="bio"></div>
+                <div id="followers-box">
+
+                    <span class="titles">Followed by</span>
+                    <div id="followers"></div>
+
+                </div>
+
+                <div id="followers-panel"></div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
