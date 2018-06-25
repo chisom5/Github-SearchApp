@@ -2,13 +2,13 @@ const input = document.getElementById("user-Search");
 
 input.addEventListener("input", (e) => {
     let githubUserName = e.target.value;
-    // console.log(githubUserName);
+    console.log(githubUserName);
 
     // using fetch api to get the user
     fetch(`https://api.github.com/users/${githubUserName}`)
         .then(response => response.json())
         .then(json => {
-            // console.log(json);
+            console.log(json);
             if (json.message === 'Not Found') {
                 document.getElementById('username').innerText = 'User Not Found';
             } else {
@@ -26,11 +26,10 @@ input.addEventListener("input", (e) => {
     fetch(`https://api.github.com/users/${githubUserName}/followers`)
         .then(response => response.json())
         .then(followers => {
-            // console.log(followers)
+            console.log(followers)
 
             for (let i = 0; i < followers.length; i++) {
                 const followersPanel = document.getElementById('followers-panel');
-                // followersPanel.style.display = 'inline-Block';
                 let followerDetails = document.createElement('div');
                 let followerLink = document.createElement('a');
                 let followerName = document.createElement('p');
@@ -40,8 +39,9 @@ input.addEventListener("input", (e) => {
                 followerLink.setAttribute('href', followers[i].html_url);
                 followerLink.setAttribute('target', '_blank');
                 followerAvatar.setAttribute('src', followers[i].avatar_url);
+                followerAvatar.setAttribute('class', 'img-followers');
 
-                // append all to the follower pannel
+                // followersPanel.innerText = '';
                 followersPanel.appendChild(followerDetails);
                 followerDetails.appendChild(followerLink);
                 followerLink.appendChild(followerName);

@@ -8,7 +8,6 @@
     img {
         border: 1px solid rgba(42, 14, 54, 0.986);
         border-radius: 15px;
-        /* max-width: 25%; */
     }
     
     a {
@@ -64,12 +63,15 @@
         top: 220px;
     }
     
-    .followers-pannel {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    #followers-panel {
+        display: grid;
+        grid-template-columns: auto auto auto;
     }
     
     #bio {
         padding: 10px;
+    }
+    
+    .img-followers {
+        width: 350px;
     }
